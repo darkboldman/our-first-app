@@ -1,30 +1,33 @@
-import React, { useState } from 'react';
-import './App.css';
+import React from 'react'
+import Product from './Product'
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    // Incorrect way to apparoach ----> count += 1;
-    //Correct way to do increment is as below
-    setCount(count + 1)
-  };
-
-  const decrement = () => {
-    // Incorrect way to apparoach ----> count -= 1;
-    //Correct way to do increment is as below
-    setCount(count - 1)
-  };
-
   return (
-    //BEM naming convention
-    <div className="app">
-      <h1> Welcome to my Counter App</h1>
-      <p>The count is: {count}</p>
-      <button onClick={decrement}>-</button>
-      <button onClick={increment}>+</button>
+    <div>
+      <h1>Wellcome to Shop!!</h1>
+
+      <Product 
+      name='Amazon Echo' 
+      description='Your AI Assistant' 
+      price={59.99} />
+
+      <Product 
+      name='Google Home' 
+      description='Your AI Assistant' 
+      price={99.99} />
+
+      <Product 
+      name='Iphone 12 Pro max' 
+      description='The best Iphone yet' 
+      price={1200} />
+
+      {/* Product name,description,price */}
+      {/* Product name,description,price */}
+      {/* Product name,description,price */}
+      {/* Product name,description,price */}
     </div>
   );
 }
 
-export default App;
+export default App
+
